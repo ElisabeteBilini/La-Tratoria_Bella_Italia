@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="form-container-booking">
+            <form action="process_booking.php" method="POST">
+                <div>
+                    <h2>Booking</h2>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name<span class="required-field">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number<span class="required-field">*</span></label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email<span class="required-field">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label for="booking_date">Booking Date<span class="required-field">*</span></label>
+                    <input type="date" id="booking_date" name="booking_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="booking_time">Booking Time<span class="required-field">*</span></label>
+                    <select id="booking_time" name="booking_time" required>
+                        <option value="09:00">11:30</option>
+                        <!-- Add other time options here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="number_of_people">Number of People<span class="required-field">*</span></label>
+                    <input type="number" id="number_of_people" name="number_of_people" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" rows="3" placeholder="Write your message here"></textarea>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="data_protection" required>
+                    <label class="form-check-label" for="data_protection">I have read and agree to the data protection policy.</label>
+                </div>
+                
+                <!-- "Read Data Protection Policy" Button -->
+                <button id="showPolicies">Booking Policy</button>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn-booking">Submit Booking</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Data Protection Policy Dialog -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Reservation is valid only for the selected space and time. 
+                We allow a maximum 10-minute tolerance to guarantee the reservation. 
+                The reservation will be seated at the table when 80% of the group is present. 
+                If you have any dietary restrictions, please inform us in the booking comments.</p>
+            <div class="popup-button-container">
+                <button id="closePopup" onclick="closePopup">Close</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
