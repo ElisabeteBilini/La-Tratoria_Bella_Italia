@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap'); 
+
+body{
+    font-family: "Quicksand", sans-serif;
+}
+
+/* HEADER - NAV BAR*/
+
+.navbar {
+    background-color: #2b2b2b;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #ccc;
+  }
+  
+  .navbar-nav .nav-item {
+    text-align: center;
+  }
+  
+  .navbar-nav .nav-item a {
+    color: #ccc;
+  
+    transition: color 0.2s;
+  }
+  
+  .navbar-nav .nav-item:hover a,
+  .navbar-nav .nav-item.active a {
+    color: #800020; /* Borgonha */
+  }
+
+  .navbar-brand span {
+    color: rgb(156, 155, 155);
+    font-size: 1em;
+  }
+  
+  .navbar-brand {
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-expand-md .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-expand-md .navbar-collapse {
+      display: none;
+    }
+  
+    .navbar-expand-md .navbar-toggler-icon {
+      display: block;
+    }
+  
+    .navbar-expand-md .show {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .navbar-nav {
+      margin-left: auto;
+    }
+  
+    .navbar-brand {
+      margin-right: auto;
+    }
+  }
+  
