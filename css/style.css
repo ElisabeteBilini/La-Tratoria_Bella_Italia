@@ -38,6 +38,42 @@ body{
     padding: 0;
   }
 
+  
+  /* CAROUSEL INDEX.HTML */
+  .carousel {
+    text-align: center;
+  }
+  
+  .carousel-inner .carousel-item {
+    text-align: center;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    color: #ccc;
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 10px;
+  }
+  
+  .carousel-caption h3, .carousel-caption p {
+    margin: 0;
+  }
+  
+  .carousel-control-prev, .carousel-control-next {
+    color: #fff;
+    border: none;
+  }
+  
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    color: #ccc;
+  }
+
 
   /* FOOTER */
   footer {
@@ -138,5 +174,15 @@ body{
     .navbar-brand {
       margin-right: auto;
     }
+
+    .carousel-caption {
+    margin-bottom: 20vh;
+    }
+
+    .carousel-item{
+      height: 90vh;
+      width: 100%;
+    }
+    
   }
   
