@@ -57,7 +57,7 @@ body{
   .carousel-caption {
     position: absolute;
     color: #ccc;
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.7); 
     border-radius: 10px;
     width: auto;
     text-align: center;
@@ -105,6 +105,96 @@ body{
     transform: scale(1.1);
     border-radius: 15px;
 }
+
+  /* REVIEW SECTION */
+  .review-section {
+    max-width: 1200px;
+    height: 50vh;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .carousel-review {
+    width: 800%; /* 100% (largura do slide) * 8 (número de slides) */
+    max-width: 100%; /* Garante que o carrossel não ultrapasse o contêiner */
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .customer-review {
+    flex: 0 0 33.33%; /* 1/3 da largura do carrossel para cada slide */
+  }
+
+  .customer-review:first-child {
+    display: block; /* Mostra apenas o primeiro slide */
+  }
+
+  .customer {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .customer-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .customer-review img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .circular-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .customer-info {
+    margin-left: 20px;
+  }
+  
+  .customer-info h2 {
+    font-size: 1.2em;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  
+  .review {
+    font-size: 1em;
+  }
+  
+  .stars {
+    font-size: 1.5em;
+    margin-top: 5px;
+  }
+  
+  .star {
+    color: #f9d71c;
+  }
+  
 
   /* FOOTER */
   footer {
@@ -228,6 +318,10 @@ body{
     .carousel-caption p{
       margin: 0;
       font-size: 15px;
+    }
+
+    .review-section{
+      padding-top: 40px;
     }
   }
   
