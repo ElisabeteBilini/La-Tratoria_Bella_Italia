@@ -393,8 +393,120 @@ body{
     height: 100%;
     border: none;
   }
-  /* MIDIA QUERIES*/  
+  /* BOOKING*/  
+  #booking-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+    text-align: center;
+    position: relative;
+    background: url('../images/reserveds.jpg') center center/cover no-repeat fixed;
+  }
 
+  .form-container-booking {
+    background-color: rgba(204, 196, 196, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+  }
+  .form-container-booking h2{
+    padding-bottom: 10px;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .form-group label {
+    width: 40%;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 60%;
+  }
+  
+  .required-field{
+    color: #d61717;
+    padding-left: 5px;
+  }
+  
+  #showPolicies{
+    font-size: 15px;
+     background-color: rgb(240, 163, 163);
+    color: #000;
+    font-weight: bold;
+    width: fit-content;
+    margin-top: 5px;
+  }
+  
+  .btn-booking{
+    background-color: #92e27e;
+    color: #000;
+    font-size: 15px;
+    padding: 5px 10px;
+    font-weight: bold;
+    
+  }
+    
+  .booking-section-right{
+    text-align: center;
+    position: relative; 
+    width: 100%; 
+    padding-top: 10%; 
+  }
+  
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    min-width: 40%; 
+    max-width: 80%; 
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  .popup-content {
+    padding: 40px; 
+    text-align: center;
+    font-size: 18px; 
+    line-height: 1.5; 
+  }
+  
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #closePopup{
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+
+  /* MIDIA QUERIES*/  
   @media (max-width: 768px) {
     .navbar-expand-md .navbar-toggler {
       display: block;

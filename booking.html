@@ -7,6 +7,7 @@
     <title>La Trattoria Bella Italia</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -42,7 +43,8 @@
         </div>
       </nav>
     </header>
-    <section>
+
+    <section  id="booking-body">
         <div class="form-container-booking">
             <form action="process_booking.php" method="POST">
                 <div>
@@ -67,8 +69,29 @@
                 <div class="form-group">
                     <label for="booking_time">Booking Time<span class="required-field">*</span></label>
                     <select id="booking_time" name="booking_time" required>
-                        <option value="09:00">11:30</option>
-                        <!-- Add other time options here -->
+                      <option value="09:00">11:30</option>
+                      <option value="10:00">12:00</option>
+                      <option value="10:00">12:30</option>
+                      <option value="10:00">13:00</option>
+                      <option value="10:00">13:30</option>
+                      <option value="10:00">14:00</option>
+                      <option value="10:00">14:30</option>
+                      <option value="10:00">15:00</option>
+                      <option value="10:00">15:30</option>
+                      <option value="10:00">16:00</option>
+                      <option value="10:00">16:30</option>
+                      <option value="10:00">17:00</option>
+                      <option value="10:00">17:30</option>
+                      <option value="10:00">18:00</option>
+                      <option value="10:00">18:30</option>
+                      <option value="10:00">19:00</option>
+                      <option value="10:00">19:30</option>
+                      <option value="10:00">20:00</option>
+                      <option value="10:00">20:30</option>
+                      <option value="10:00">21:00</option>
+                      <option value="10:00">21:30</option>
+                      <option value="10:00">22:00</option>
+                      <option value="10:00">22:30</option>   
                     </select>
                 </div>
                 <div class="form-group">
@@ -102,10 +125,11 @@
                 The reservation will be seated at the table when 80% of the group is present. 
                 If you have any dietary restrictions, please inform us in the booking comments.</p>
             <div class="popup-button-container">
-                <button id="closePopup" onclick="closePopup">Close</button>
+              <button id="closePopup" onclick="closePopup()">Close</button>
             </div>
         </div>
     </div>
+
     <footer>
         <div class="container-fluid">
           <div class="row">
