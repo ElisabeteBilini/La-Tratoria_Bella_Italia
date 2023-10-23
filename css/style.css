@@ -266,7 +266,7 @@ body{
     color: #000;
 }
 
-  /* MENU */  
+  /* MENU and BAR */  
   .menu {
     max-width: 800px;
     margin: 20px auto;
@@ -392,7 +392,6 @@ body{
       padding-top: 40px;
     }
 
-/* MENU */
 .menu {
   display: flex;
   flex-wrap: wrap;
