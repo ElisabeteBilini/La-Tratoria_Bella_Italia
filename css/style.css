@@ -56,13 +56,22 @@ body{
   
   .carousel-caption {
     position: absolute;
-    color: #000;
-    background-color: rgba(177, 169, 169, 0.9); 
+    color: #ccc;
+    background-color: rgba(0, 0, 0, 0.8); 
     border-radius: 10px;
+    width: auto;
+    text-align: center;
+    margin-bottom: 10px;
   }
   
-  .carousel-caption h3, .carousel-caption p {
+  .carousel-caption h3 {
     margin: 0;
+    font-size: 15px;
+  }
+
+  .carousel-caption p{
+    margin: 0;
+    font-size: 13px;
   }
   
   .carousel-control-prev, .carousel-control-next {
@@ -78,8 +87,8 @@ body{
   /* ABOUT RESTAURANT */
   .about-section {
     padding: 50px 0;
-    background-color: #ecdbc5;
-    margin-top: 10px;
+    background-color: #cec7c7;
+    margin-top: 15px;
 }
 
 .about-us-text {
@@ -89,10 +98,12 @@ body{
 
 .image-zoom {
     transition: transform 0.3s;
+    border-radius: 10px;
 }
 
 .image-zoom:hover {
     transform: scale(1.1);
+    border-radius: 15px;
 }
 
   /* FOOTER */
@@ -208,5 +219,15 @@ body{
     .about-us-text {
       text-align: justify;
   }
+
+    .carousel-caption h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .carousel-caption p{
+      margin: 0;
+      font-size: 15px;
+    }
   }
   
