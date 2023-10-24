@@ -1,3 +1,39 @@
+//HEADER HTML
+// header-inject.js
+document.addEventListener('DOMContentLoaded', function () {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'header.html', true);
+
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+          var headerContainer = document.getElementById('header-container');
+          headerContainer.innerHTML = xhr.responseText;
+      }
+  };
+
+  xhr.send();
+});
+
+
+//FOOTER HTML
+// footer-inject.js
+document.addEventListener('DOMContentLoaded', function () {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'footer.html', true);
+
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+          var footerContainer = document.getElementById('footer-container');
+          footerContainer.innerHTML = xhr.responseText;
+      }
+  };
+
+  xhr.send();
+});
+
+
+
+
 //BOOKING ALL VALIDATIONS
 document.addEventListener("DOMContentLoaded", function () {
   // Referências aos elementos do formulário
