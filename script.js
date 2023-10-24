@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const popup = document.getElementById("popup");
 
         if (checkbox.disabled) {
-            return; // Se o checkbox estiver desabilitado, sair da função
+            return;
         }
 
         if (popup.style.display === "none") {

@@ -51,7 +51,7 @@ body{
   
   .carousel-item img {
     width: 100%;
-    height: auto; /* proportion of image */
+    height: 60vh; /* proportion of image */
   }
   
   .carousel-caption {
@@ -88,7 +88,7 @@ body{
   .about-section {
     padding: 50px 30px;
     background-color: #cec7c7;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .about-us-text {
@@ -267,6 +267,46 @@ body{
     color: #000;
 }
 
+/* BACK TO TOP */
+#back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 999;
+  animation: bounce 1s infinite alternate; 
+  padding-left: 5px;
+}
+
+/* Jump animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#back-to-top a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 50%;
+  background-color: #2b2b2b;
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#back-to-top a:hover {
+  background-color: #ccc;
+  color: #2b2b2b;
+  border-color: transparent;
+}
+
   /* MENU - BAR - EVENTS */  
   .menu {
     max-width: 800px;
@@ -371,6 +411,24 @@ body{
     /* Estilos personalizados para campos de entrada */
   }
 
+  button {
+    background-color: #2b2b2b;
+    color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /* Estilo do botão quando o mouse passa sobre ele (hover) */
+  button:hover {
+    background-color: #ccc;
+    color: #2b2b2b;
+  }
+  button i.fa {
+    margin-right: 5px;
+  }
+
   .contact-right {
     flex: 1;
     padding: 10px;
@@ -408,7 +466,7 @@ body{
   }
 
   .form-container-booking {
-    background-color: rgba(204, 196, 196, 0.8);
+    background-color: rgba(204, 196, 196, 0.7);
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -429,15 +487,17 @@ body{
   }
   
   .form-group label {
-    width: 40%;
+    display: none;
+  /*  width: 40%;
     text-align: right;
-    margin-right: 10px;
+    margin-right: 10px;*/
   }
   
   .form-group input,
   .form-group select,
   .form-group textarea {
-    width: 60%;
+    width: 100%;
+    padding: 5px;
   }
   
   .required-field{
@@ -447,19 +507,17 @@ body{
   
   #showPolicies{
     font-size: 15px;
-     background-color: rgb(240, 163, 163);
-    color: #000;
-    font-weight: bold;
+     background-color: #d61717;
+    color: #fff;
     width: fit-content;
     margin-bottom: 10px;
   }
   
   .btn-booking{
-    background-color: #92e27e;
-    color: #000;
+    background-color: #2c641f;
+    color: #fff;
     font-size: 15px;
-    padding: 5px 10px;
-    font-weight: bold;
+    padding: 10px 10px;
     
   }
   
@@ -610,6 +668,10 @@ body{
 }
 
 @media (min-width: 600px) {
+  .carousel-item img {
+    width: 100%;
+    height: auto; /* proportion of image */
+  }
   .container-contact {
     display: flex;
     flex-direction: row;
