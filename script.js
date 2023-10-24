@@ -1,3 +1,65 @@
+//BOOKING ALL VALIDATIONS
+document.addEventListener("DOMContentLoaded", function () {
+  // Referências aos elementos do formulário
+  const form = document.querySelector("form");
+  const nameInput = document.getElementById("name");
+  const phoneInput = document.getElementById("phone");
+  const emailInput = document.getElementById("email");
+  const bookingDateInput = document.getElementById("booking_date");
+  const bookingTimeSelect = document.getElementById("booking_time");
+  const numberOfPeopleInput = document.getElementById("number_of_people");
+
+  // REAL TIME VALIDATION
+  nameInput.addEventListener("input", validateName);
+  phoneInput.addEventListener("input", validatePhone);
+  emailInput.addEventListener("input", validateEmail);
+  bookingDateInput.addEventListener("input", validateBookingDate);
+
+  // NAME VALIDATION
+  function validateName() {
+    const nameValue = nameInput.value.trim();
+    if (nameValue === "") {
+      nameInput.setCustomValidity("Please enter your name.");
+    } else {
+      nameInput.setCustomValidity("");
+    }
+  }
+
+  // PHONE VALIDATION
+  function validatePhone() {
+    const phoneValue = phoneInput.value.trim();
+    if (!/^\d{10}$/.test(phoneValue)) {
+      phoneInput.setCustomValidity("Please enter a valid 10-digit phone number.");
+    } else {
+      phoneInput.setCustomValidity("");
+    }
+  }
+
+  // EMAIL VALIDATION
+  function validateEmail() {
+    const emailValue = emailInput.value.trim();
+    if (!/^\S+@\S+\.\S+$/.test(emailValue)) {
+      emailInput.setCustomValidity("Please enter a valid email address.");
+    } else {
+      emailInput.setCustomValidity("");
+    }
+  }
+
+  // BOOKING TABLE VALIDATION
+  function validateBookingDate() {
+    const selectedDate = new Date(bookingDateInput.value);
+    const currentDate = new Date();
+
+    if (selectedDate < currentDate) {
+      bookingDateInput.setCustomValidity("Please choose a future date.");
+    } else {
+      bookingDateInput.setCustomValidity("");
+    }
+  }
+});
+
+ 
+ 
  // BOOKING POLICY
 // Checkbox
 document.addEventListener("DOMContentLoaded", function() {
