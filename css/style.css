@@ -86,7 +86,7 @@ body{
 
   /* ABOUT RESTAURANT */
   .about-section {
-    padding: 50px 0;
+    padding: 50px 30px;
     background-color: #cec7c7;
     margin-top: 15px;
 }
@@ -535,7 +535,7 @@ body{
     }
 
     .carousel-item{
-      height: 100%;
+      height: 85vh;
       width: 100%;
     }
     
